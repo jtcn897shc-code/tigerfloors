@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{AGENT_NAME}} — {{AGENT_TITLE}}</title>
+  <meta name="description" content="{{AGENT_NAME}}, {{AGENT_TITLE}} with {{BROKERAGE}}. {{TAGLINE}} Call or text {{PHONE}}." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/client-tokens.css" />
+  <script>window.__DESTURA_PHONE_HREF__ = "{{PHONE_HREF}}"; window.__DESTURA_PHONE__ = "{{PHONE}}"; window.__DESTURA_BOOKING_URL__ = "";</script>
+  <script src="js/main.js" defer></script>
+  <script src="js/chat.js" defer></script>
+</head>
+<body>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__brand">{{AGENT_NAME}} <span>· {{BROKERAGE_SHORT}}</span></a>
+    <nav class="nav__links">
+      <a href="#listings">Listings</a>
+      <a href="#about">About</a>
+      <a href="#neighborhoods">Neighborhoods</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav__phone" href="tel:{{PHONE_HREF}}">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      {{PHONE}}
+    </a>
+  </header>
+
+  <main id="top">
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="shell hero__grid">
+        <div>
+          <p class="kicker" data-reveal style="--i:0">{{AGENT_TITLE}} · {{BROKERAGE}}</p>
+          <h1 class="hero__title" data-reveal style="--i:1">{{HERO_HEADLINE}}</h1>
+          <p class="hero__sub" data-reveal style="--i:2">{{TAGLINE}}</p>
+          <div class="hero__actions" data-reveal style="--i:3">
+            <a href="#valuation" class="btn btn--primary">What's My Home Worth?</a>
+            <a href="tel:{{PHONE_HREF}}" class="btn btn--ghost">Call or Text</a>
+          </div>
+          <p class="hero__areas" data-reveal style="--i:4">{{AREAS_INLINE}}</p>
+        </div>
+        <!-- Photography-shaped placeholder — swap for the agent's real
+             portrait when instantiating for a real client. -->
+        <div class="hero__portrait" data-reveal style="--i:2" aria-hidden="true">
+          <span class="hero__portrait-mark">{{AGENT_INITIALS}}</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STATS ================= -->
+    <div class="stats">
+      <div class="shell stats__row">
+        <!-- REPEAT:stats -->
+        <div class="stat" data-reveal>
+          <span class="stat__value"><span data-countup="{{STAT_VALUE}}">0</span>{{STAT_SUFFIX}}</span>
+          <span class="stat__label">{{STAT_LABEL}}</span>
+        </div>
+        <!-- END:stats -->
+      </div>
+    </div>
+
+    <!-- ================= LISTINGS ================= -->
+    <section class="section" id="listings">
+      <div class="shell">
+        <div class="section__head" data-reveal>
+          <p class="kicker">Featured Listings</p>
+          <h2 class="section__title">Homes worth your Saturday.</h2>
+        </div>
+        <div class="listings__grid">
+          <!-- REPEAT:listings -->
+          <div class="listing" data-reveal>
+            <div class="listing__media"><span class="listing__status">{{LISTING_STATUS}}</span></div>
+            <div class="listing__body">
+              <p class="listing__price">{{LISTING_PRICE}}</p>
+              <p class="listing__address">{{LISTING_ADDRESS}}, {{LISTING_CITY}}</p>
+              <p class="listing__meta">{{LISTING_BEDS}} bed · {{LISTING_BATHS}} bath · {{LISTING_SQFT}} sqft</p>
+            </div>
+          </div>
+          <!-- END:listings -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section section--linen" id="about">
+      <div class="shell about">
+        <div class="hero__portrait" data-reveal aria-hidden="true">
+          <span class="hero__portrait-mark">{{AGENT_INITIALS}}</span>
+        </div>
+        <div data-reveal>
+          <p class="kicker">About {{AGENT_FIRST}}</p>
+          <h2 class="section__title">A realtor who tells you the truth.</h2>
+          <p class="about__bio">{{AGENT_BIO}}</p>
+          <a href="tel:{{PHONE_HREF}}" class="btn btn--primary">Work With {{AGENT_FIRST}}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NEIGHBORHOODS ================= -->
+    <section class="section" id="neighborhoods">
+      <div class="shell">
+        <div class="section__head" data-reveal>
+          <p class="kicker">Local Knowledge</p>
+          <h2 class="section__title">The neighborhoods I know street by street.</h2>
+        </div>
+        <div class="hoods__grid">
+          <!-- REPEAT:neighborhoods -->
+          <div class="hood" data-reveal>
+            <h3 class="hood__name">{{HOOD_NAME}}</h3>
+            <p class="hood__blurb">{{HOOD_BLURB}}</p>
+          </div>
+          <!-- END:neighborhoods -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VALUATION ================= -->
+    <section class="section section--dark valuation" id="valuation">
+      <div class="shell">
+        <p class="kicker" style="justify-content:center;" data-reveal>Home Valuation</p>
+        <h2 class="section__title" data-reveal>What's your home actually worth?</h2>
+        <p class="valuation__blurb" data-reveal>{{VALUATION_BLURB}}</p>
+        <div data-reveal>
+          <button class="btn btn--book" id="valuation-open" type="button">Get My Free Valuation</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="section" id="testimonials">
+      <div class="shell">
+        <div class="section__head" data-reveal>
+          <p class="kicker">Client Words</p>
+          <h2 class="section__title">The reviews that matter.</h2>
+        </div>
+        <div class="quotes__grid">
+          <!-- REPEAT:testimonials -->
+          <blockquote class="quote" data-reveal>
+            <p class="quote__text">"{{QUOTE_TEXT}}"</p>
+            <p class="quote__name">{{QUOTE_NAME}}</p>
+          </blockquote>
+          <!-- END:testimonials -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section section--linen" id="faq">
+      <div class="shell" style="max-width: 800px;">
+        <div class="section__head" data-reveal>
+          <p class="kicker">Questions</p>
+          <h2 class="section__title">Before we talk.</h2>
+        </div>
+        <div data-reveal>
+          <!-- REPEAT:faq -->
+          <div class="faq__item">
+            <h3 class="faq__q">{{FAQ_Q}}</h3>
+            <p class="faq__a">{{FAQ_A}}</p>
+          </div>
+          <!-- END:faq -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="cta-final shell" id="contact">
+      <p class="kicker" style="justify-content:center;">Let's Talk</p>
+      <h2 class="cta-final__title">The right move starts with a conversation.</h2>
+      <p class="cta-final__sub">No pressure, no scripts — just an honest read on your situation and the market.</p>
+      <div class="cta-final__actions">
+        <a href="tel:{{PHONE_HREF}}" class="btn btn--primary">Call {{PHONE}}</a>
+        <a href="mailto:{{EMAIL}}" class="btn btn--ghost">Email {{AGENT_FIRST}}</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="shell footer__row">
+      <span class="footer__brand">{{AGENT_NAME}} · {{BROKERAGE}}</span>
+      <span>&copy; {{CURRENT_YEAR}} {{BROKERAGE}} · Serving {{AREAS_INLINE}}</span>
+      <span>{{PHONE}} · {{EMAIL}}</span>
+    </div>
+  </footer>
+
+  <!-- ================= CHAT CONCIERGE ================= -->
+  <button class="chat-trigger" id="chat-trigger" type="button" aria-haspopup="dialog" aria-controls="chat-overlay" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    Ask {{AGENT_FIRST}}
+  </button>
+  <div class="chat-overlay" id="chat-overlay" role="dialog" aria-modal="true" aria-label="Ask {{AGENT_FIRST}}" aria-hidden="true">
+    <div class="chat-bar">
+      <span class="chat-bar__title">{{AGENT_NAME}} · {{BROKERAGE_SHORT}}</span>
+      <button class="chat-close" id="chat-close" aria-label="Close">&times;</button>
+    </div>
+    <div class="chat-thread" id="chat-thread"></div>
+    <div class="chat-suggestions" id="chat-suggestions">
+      <button class="chat-chip" type="button">What's my home worth?</button>
+      <button class="chat-chip" type="button">What areas do you cover?</button>
+      <button class="chat-chip" type="button">What does a buyer's agent cost?</button>
+      <button class="chat-chip" type="button">How fast do homes sell right now?</button>
+    </div>
+    <form class="chat-input" id="chat-form">
+      <textarea id="chat-field" rows="1" placeholder="Ask a question..." required></textarea>
+      <button class="chat-send" type="submit" aria-label="Send">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
+      </button>
+    </form>
+  </div>
+</body>
+</html>
