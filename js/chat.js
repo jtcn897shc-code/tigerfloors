@@ -1,7 +1,7 @@
 /* =============================================================
-   Real estate concierge overlay — lead-capture intent renders a
+   Flooring concierge overlay — lead-capture intent renders a
    call/text CTA. Also listens for `destura:chat-open` events so
-   page CTAs (the valuation band) can open the overlay with a
+   page CTAs (the free-estimate band) can open the overlay with a
    question pre-sent — form-free lead capture through conversation.
    ============================================================= */
 (function () {
@@ -71,7 +71,7 @@
   if (closeBtn) closeBtn.addEventListener("click", close);
   overlay.addEventListener("click", function (e) { if (e.target === overlay) close(); });
 
-  // Page CTAs (e.g. the valuation band) open the overlay with a
+  // Page CTAs (e.g. the free-estimate band) open the overlay with a
   // question pre-sent, so the conversation starts already moving.
   document.addEventListener("destura:chat-open", function (e) {
     if (!isOpen()) open();

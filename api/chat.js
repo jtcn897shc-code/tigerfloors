@@ -1,4 +1,4 @@
-// Destura Template — Real estate concierge.
+// Destura Template — Flooring installer concierge.
 // Same shape as destura-portfolio's api/chat.js: Vercel Edge Function,
 // zero npm dependencies, native fetch, streaming proxy to Gemini,
 // re-emits plain text deltas so the frontend stays provider-agnostic.
@@ -11,32 +11,23 @@ const MAX_CHARS = 800;
 const HISTORY_WINDOW = 8;
 
 function buildSystemPrompt() {
-  const { agent, stats, listings, neighborhoods, faq, systemPreamble } = knowledge;
+  const { company, services, faq, systemPreamble } = knowledge;
 
-  const statsText = stats.map((s) => `- ${s.value}${s.suffix || ""} ${s.label}`).join("\n");
-  const listingsText = listings
-    .map((l) => `- ${l.address}, ${l.city} — ${l.price}, ${l.beds} bed / ${l.baths} bath, ${l.sqft} sqft (${l.status})`)
-    .join("\n");
-  const hoodsText = neighborhoods.map((n) => `- ${n.name}: ${n.blurb}`).join("\n");
+  const servicesText = services.map((s) => `- ${s.name}: ${s.blurb}`).join("\n");
   const faqText = faq.map((f) => `Q: ${f.q}\nA: ${f.a}`).join("\n\n");
 
   return `${systemPreamble}
 
-AGENT INFO
-Name: ${agent.name} (${agent.title}, ${agent.brokerage})
-Phone (call or text): ${agent.phone}
-Email: ${agent.email}
-Areas served: ${agent.areasServed.join(", ")}
-About: ${agent.bio}
+COMPANY INFO
+Name: ${company.name} (${company.category})
+Phone (call or text): ${company.phone}
+Email: ${company.email}
+City: ${company.city}
+Areas served: ${company.areasServed}
+About: ${company.bio}
 
-TRACK RECORD
-${statsText}
-
-CURRENT FEATURED LISTINGS
-${listingsText}
-
-NEIGHBORHOOD KNOWLEDGE
-${hoodsText}
+SERVICES
+${servicesText}
 
 FAQ
 ${faqText}`;

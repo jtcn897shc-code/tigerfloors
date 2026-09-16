@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elena Marsh — Fraser Valley Realtor</title>
-  <meta name="description" content="Elena Marsh, Fraser Valley Realtor with Marsh &amp; Co. Real Estate. Buying or selling in the Fraser Valley — local knowledge, honest numbers, and a realtor who answers her phone. Call or text (604) 555-0119." />
+  <title>TIGER Floors — Flooring Installation</title>
+  <meta name="description" content="TIGER Floors, Flooring Installation in Coquitlam, BC. Hardwood, laminate, vinyl, and tile installation for Coquitlam and the Lower Mainland — every job starts with a free estimate. Call or text (604) 783-0173." />
+  <meta name="theme-color" content="#152530" />
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="icon" type="image/png" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" href="images/favicon-180.png" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/client-tokens.css" />
-  <script>window.__DESTURA_PHONE_HREF__ = "+16045550119"; window.__DESTURA_PHONE__ = "(604) 555-0119"; window.__DESTURA_BOOKING_URL__ = "";</script>
+  <script>window.__DESTURA_PHONE_HREF__ = "+16047830173"; window.__DESTURA_PHONE__ = "(604) 783-0173"; window.__DESTURA_BOOKING_URL__ = "";</script>
   <script src="js/main.js" defer></script>
   <script src="js/chat.js" defer></script>
 </head>
@@ -15,16 +19,22 @@
 
   <!-- ================= NAV ================= -->
   <header class="nav" id="nav">
-    <a href="#top" class="nav__brand">Elena Marsh <span>· Marsh &amp; Co.</span></a>
-    <nav class="nav__links">
-      <a href="#listings">Listings</a>
-      <a href="#about">About</a>
-      <a href="#neighborhoods">Neighborhoods</a>
+    <a href="#top" class="nav__brand">
+      <img src="images/tiger-mark.png" alt="" class="nav__mark" width="40" height="40" />
+      TIGER Floors
+    </a>
+    <nav class="nav__links" id="nav-links">
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
       <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <a class="nav__phone" href="tel:+16045550119">
+    <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <a class="nav__phone" href="tel:+16047830173">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      (604) 555-0119
+      (604) 783-0173
     </a>
   </header>
 
@@ -33,92 +43,86 @@
     <section class="hero">
       <div class="shell hero__grid">
         <div>
-          <p class="kicker" data-reveal style="--i:0">Fraser Valley Realtor · Marsh &amp; Co. Real Estate</p>
-          <h1 class="hero__title" data-reveal style="--i:1">Your next chapter starts with the right guide.</h1>
-          <p class="hero__sub" data-reveal style="--i:2">Buying or selling in the Fraser Valley — local knowledge, honest numbers, and a realtor who answers her phone.</p>
+          <p class="kicker" data-reveal style="--i:0">Flooring Installation · Coquitlam, BC</p>
+          <h1 class="hero__title" data-reveal style="--i:1">Walk in proud of your new floor.</h1>
+          <p class="hero__sub" data-reveal style="--i:2">Hardwood, laminate, vinyl, and tile installation for Coquitlam and the Lower Mainland — every job starts with a free estimate.</p>
           <div class="hero__actions" data-reveal style="--i:3">
-            <a href="#valuation" class="btn btn--primary">What's My Home Worth?</a>
-            <a href="tel:+16045550119" class="btn btn--ghost">Call or Text</a>
+            <a href="#estimate" class="btn btn--primary">Get a Free Estimate</a>
+            <a href="tel:+16047830173" class="btn btn--ghost">Call or Text</a>
           </div>
-          <p class="hero__areas" data-reveal style="--i:4">Abbotsford · Chilliwack · Langley · Mission</p>
+          <p class="hero__areas" data-reveal style="--i:4">Serving Coquitlam &amp; the Lower Mainland</p>
         </div>
-        <!-- Photography-shaped placeholder — swap for the agent's real
-             portrait when instantiating for a real client. -->
         <div class="hero__portrait" data-reveal style="--i:2" aria-hidden="true">
-          <span class="hero__portrait-mark">EM</span>
+          <img src="images/tiger-mark.png" alt="" class="hero__mark" />
         </div>
       </div>
     </section>
 
-    <!-- ================= STATS ================= -->
-    <div class="stats">
-      <div class="shell stats__row">
+    <!-- ================= MATERIALS STRIP ================= -->
+    <div class="materials">
+      <div class="shell materials__row">
         
-        <div class="stat" data-reveal>
-          <span class="stat__value"><span data-countup="240">0</span>+</span>
-          <span class="stat__label">Homes sold</span>
+        <div class="material" data-reveal>
+          <span class="material__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="9" width="20" height="6" rx="1"/><path d="M6 9v6M12 9v6M18 9v6"/></svg></span>
+          <span class="material__name">Hardwood</span>
         </div>
         
-        <div class="stat" data-reveal>
-          <span class="stat__value"><span data-countup="15">0</span></span>
-          <span class="stat__label">Years in the Valley</span>
+        <div class="material" data-reveal>
+          <span class="material__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></svg></span>
+          <span class="material__name">Laminate</span>
         </div>
         
-        <div class="stat" data-reveal>
-          <span class="stat__value"><span data-countup="98">0</span>%</span>
-          <span class="stat__label">List-to-sale price</span>
+        <div class="material" data-reveal>
+          <span class="material__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M5 12c1.2-1.6 2.4-1.6 3.6 0s2.4 1.6 3.6 0 2.4-1.6 3.6 0 2.4 1.6 3.6 0"/></svg></span>
+          <span class="material__name">Vinyl</span>
         </div>
         
-        <div class="stat" data-reveal>
-          <span class="stat__value"><span data-countup="11">0</span></span>
-          <span class="stat__label">Days avg. on market</span>
+        <div class="material" data-reveal>
+          <span class="material__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></span>
+          <span class="material__name">Tile</span>
         </div>
         
       </div>
     </div>
 
-    <!-- ================= LISTINGS ================= -->
-    <section class="section" id="listings">
+    <!-- ================= SERVICES ================= -->
+    <section class="section" id="services">
       <div class="shell">
         <div class="section__head" data-reveal>
-          <p class="kicker">Featured Listings</p>
-          <h2 class="section__title">Homes worth your Saturday.</h2>
+          <p class="kicker">What We Install</p>
+          <h2 class="section__title">Four floors. One free estimate.</h2>
         </div>
-        <div class="listings__grid">
+        <div class="services__grid">
           
-          <div class="listing" data-reveal>
-            <div class="listing__media"><span class="listing__status">For Sale</span></div>
-            <div class="listing__body">
-              <p class="listing__price">$1,149,000</p>
-              <p class="listing__address">34521 Woodbine Crescent, Abbotsford</p>
-              <p class="listing__meta">4 bed · 3 bath · 2,860 sqft</p>
+          <div class="service" data-reveal>
+            <div class="service__icon-wrap"><span class="service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="9" width="20" height="6" rx="1"/><path d="M6 9v6M12 9v6M18 9v6"/></svg></span></div>
+            <div class="service__body">
+              <h3 class="service__name">Hardwood</h3>
+              <p class="service__blurb">Solid and engineered hardwood installation, built to last and refinish over time.</p>
             </div>
           </div>
           
-          <div class="listing" data-reveal>
-            <div class="listing__media"><span class="listing__status">For Sale</span></div>
-            <div class="listing__body">
-              <p class="listing__price">$689,000</p>
-              <p class="listing__address">8-45766 Chestnut Lane, Chilliwack</p>
-              <p class="listing__meta">3 bed · 2 bath · 1,540 sqft</p>
+          <div class="service" data-reveal>
+            <div class="service__icon-wrap"><span class="service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></svg></span></div>
+            <div class="service__body">
+              <h3 class="service__name">Laminate</h3>
+              <p class="service__blurb">Durable, budget-friendly flooring that holds up to daily life.</p>
             </div>
           </div>
           
-          <div class="listing" data-reveal>
-            <div class="listing__media"><span class="listing__status">Just Listed</span></div>
-            <div class="listing__body">
-              <p class="listing__price">$1,395,000</p>
-              <p class="listing__address">2203 Riverbend Terrace, Langley</p>
-              <p class="listing__meta">5 bed · 4 bath · 3,410 sqft</p>
+          <div class="service" data-reveal>
+            <div class="service__icon-wrap"><span class="service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M5 12c1.2-1.6 2.4-1.6 3.6 0s2.4 1.6 3.6 0 2.4-1.6 3.6 0 2.4 1.6 3.6 0"/></svg></span></div>
+            <div class="service__body">
+              <h3 class="service__name">Vinyl</h3>
+              <p class="service__blurb">Waterproof, low-maintenance flooring for kitchens, baths, and busy households.</p>
             </div>
           </div>
           
-          <div class="listing" data-reveal>
-            <div class="listing__media"><span class="listing__status">Sold</span></div>
-            <div class="listing__body">
-              <p class="listing__price">$874,500</p>
-              <p class="listing__address">12 Cedarholme Gate, Mission</p>
-              <p class="listing__meta">4 bed · 3 bath · 2,120 sqft</p>
+          <div class="service" data-reveal>
+            <div class="service__icon-wrap"><span class="service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></span></div>
+            <div class="service__body">
+              <h3 class="service__name">Tile</h3>
+              <p class="service__blurb">Precision tile installation for kitchens, bathrooms, and entryways.</p>
             </div>
           </div>
           
@@ -127,120 +131,93 @@
     </section>
 
     <!-- ================= ABOUT ================= -->
-    <section class="section section--linen" id="about">
+    <section class="section section--tan" id="about">
       <div class="shell about">
-        <div class="hero__portrait" data-reveal aria-hidden="true">
-          <span class="hero__portrait-mark">EM</span>
+        <div class="hero__portrait about__portrait" data-reveal aria-hidden="true">
+          <img src="images/tiger-mark.png" alt="" class="hero__mark" />
         </div>
         <div data-reveal>
-          <p class="kicker">About Elena</p>
-          <h2 class="section__title">A realtor who tells you the truth.</h2>
-          <p class="about__bio">Fifteen years selling homes where I grew up. I price honestly, negotiate hard, and tell you the things other agents won't — including when not to buy.</p>
-          <a href="tel:+16045550119" class="btn btn--primary">Work With Elena</a>
+          <p class="kicker">About TIGER Floors</p>
+          <h2 class="section__title">Walk in proud.</h2>
+          <p class="about__bio">TIGER Floors installs hardwood, laminate, vinyl, and tile floors across Coquitlam and the Lower Mainland. Every quote starts with a free, no-pressure estimate — no work gets booked until you've seen a real number.</p>
+          <a href="tel:+16047830173" class="btn btn--primary">Work With Us</a>
         </div>
       </div>
     </section>
 
-    <!-- ================= NEIGHBORHOODS ================= -->
-    <section class="section" id="neighborhoods">
+    <!-- ================= RECENT WORK ================= -->
+    <section class="section" id="work">
       <div class="shell">
         <div class="section__head" data-reveal>
-          <p class="kicker">Local Knowledge</p>
-          <h2 class="section__title">The neighborhoods I know street by street.</h2>
+          <p class="kicker">Recent Work</p>
+          <h2 class="section__title">A fresh floor makes all the difference.</h2>
+          <p class="gallery__blurb">Before-and-after photos from real jobs are coming soon.</p>
         </div>
-        <div class="hoods__grid">
+        <div class="gallery__grid">
           
-          <div class="hood" data-reveal>
-            <h3 class="hood__name">East Abbotsford</h3>
-            <p class="hood__blurb">Family streets, top school catchments, and the Valley's best sunset views off Sumas Mountain.</p>
+          <div class="gallery__slot" data-reveal>
+            <div class="gallery__media"><span class="gallery__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="9" width="20" height="6" rx="1"/><path d="M6 9v6M12 9v6M18 9v6"/></svg></span></div>
+            <p class="gallery__label">Hardwood — Coquitlam</p>
           </div>
           
-          <div class="hood" data-reveal>
-            <h3 class="hood__name">Sardis &amp; Vedder</h3>
-            <p class="hood__blurb">Chilliwack's fastest-growing pocket — river trails, new builds, and small-town Saturday markets.</p>
+          <div class="gallery__slot" data-reveal>
+            <div class="gallery__media"><span class="gallery__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></span></div>
+            <p class="gallery__label">Tile — Coquitlam</p>
           </div>
           
-          <div class="hood" data-reveal>
-            <h3 class="hood__name">Willoughby</h3>
-            <p class="hood__blurb">Langley's commuter sweet spot: new townhomes, growing amenities, highway access in minutes.</p>
+          <div class="gallery__slot" data-reveal>
+            <div class="gallery__media"><span class="gallery__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M5 12c1.2-1.6 2.4-1.6 3.6 0s2.4 1.6 3.6 0 2.4-1.6 3.6 0 2.4 1.6 3.6 0"/></svg></span></div>
+            <p class="gallery__label">Vinyl — Coquitlam</p>
           </div>
           
         </div>
       </div>
     </section>
 
-    <!-- ================= VALUATION ================= -->
-    <section class="section section--dark valuation" id="valuation">
+    <!-- ================= FREE ESTIMATE ================= -->
+    <section class="section section--dark estimate" id="estimate">
       <div class="shell">
-        <p class="kicker" style="justify-content:center;" data-reveal>Home Valuation</p>
-        <h2 class="section__title" data-reveal>What's your home actually worth?</h2>
-        <p class="valuation__blurb" data-reveal>Thinking of selling? Most homeowners are two years out of date on what their place is actually worth. Get a real number — based on live comparables, not an online estimate.</p>
+        <p class="kicker" style="justify-content:center;" data-reveal>Free Estimate</p>
+        <h2 class="section__title" data-reveal>Get your free estimate.</h2>
+        <p class="estimate__blurb" data-reveal>Every TIGER Floors quote starts with a free, no-obligation estimate. Tell us the room and the material you're considering, and we'll get back to you with a real number.</p>
         <div data-reveal>
-          <button class="btn btn--book" id="valuation-open" type="button">Get My Free Valuation</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= TESTIMONIALS ================= -->
-    <section class="section" id="testimonials">
-      <div class="shell">
-        <div class="section__head" data-reveal>
-          <p class="kicker">Client Words</p>
-          <h2 class="section__title">The reviews that matter.</h2>
-        </div>
-        <div class="quotes__grid">
-          
-          <blockquote class="quote" data-reveal>
-            <p class="quote__text">"Elena told us our dream house was overpriced and talked us out of it. Six months later she found us a better one for less. That's the whole review."</p>
-            <p class="quote__name">Jordan &amp; Priya S., Abbotsford</p>
-          </blockquote>
-          
-          <blockquote class="quote" data-reveal>
-            <p class="quote__text">"Sold in nine days, over asking, after another agent had it sitting for three months. The difference was the prep and the pricing."</p>
-            <p class="quote__name">Marcus W., Chilliwack</p>
-          </blockquote>
-          
-          <blockquote class="quote" data-reveal>
-            <p class="quote__text">"First-time buyers with a thousand questions — she answered every single one, usually within the hour."</p>
-            <p class="quote__name">Dana K., Langley</p>
-          </blockquote>
-          
+          <button class="btn btn--book" id="estimate-open" type="button">Get My Free Estimate</button>
         </div>
       </div>
     </section>
 
     <!-- ================= FAQ ================= -->
-    <section class="section section--linen" id="faq">
+    <section class="section section--tan" id="faq">
       <div class="shell" style="max-width: 800px;">
         <div class="section__head" data-reveal>
           <p class="kicker">Questions</p>
-          <h2 class="section__title">Before we talk.</h2>
+          <h2 class="section__title">Before you call.</h2>
         </div>
         <div data-reveal>
           
           <div class="faq__item">
-            <h3 class="faq__q">What areas do you cover?</h3>
-            <p class="faq__a">Abbotsford, Chilliwack, Langley, and Mission — the communities I've lived and sold in for fifteen years.</p>
+            <h3 class="faq__q">Do you offer free estimates?</h3>
+            <p class="faq__a">Yes — every job starts with a free, no-obligation estimate before anything gets booked.</p>
           </div>
           
           <div class="faq__item">
-            <h3 class="faq__q">What does it cost to work with you as a buyer?</h3>
-            <p class="faq__a">For buyers, my commission is paid by the seller in almost all cases — my guidance costs you nothing out of pocket.</p>
+            <h3 class="faq__q">What types of flooring do you install?</h3>
+            <p class="faq__a">Hardwood, laminate, vinyl, and tile.</p>
           </div>
           
           <div class="faq__item">
-            <h3 class="faq__q">How do you decide a listing price?</h3>
-            <p class="faq__a">Live comparables, current buyer demand, and an honest walk-through of your home — not a formula, and never a flattering number just to win the listing.</p>
+            <h3 class="faq__q">What areas do you serve?</h3>
+            <p class="faq__a">We're based in Coquitlam and serve the surrounding Lower Mainland — ask us to confirm coverage for your address.</p>
           </div>
           
           <div class="faq__item">
-            <h3 class="faq__q">How fast do you respond?</h3>
-            <p class="faq__a">Same day, usually within the hour. Text is fastest. Most deals are won and lost in response time, and I treat it that way.</p>
+            <h3 class="faq__q">How long does an installation take?</h3>
+            <p class="faq__a">It depends on the material and the size of the space. We'll give you a realistic timeline as part of your free estimate.</p>
           </div>
           
           <div class="faq__item">
-            <h3 class="faq__q">Can I see homes on evenings or weekends?</h3>
-            <p class="faq__a">Yes — most showings happen outside business hours, and I plan around your schedule, not mine.</p>
+            <h3 class="faq__q">How do I get started?</h3>
+            <p class="faq__a">Call or text (604) 783-0173, email tigerfloors.sales@gmail.com, or ask Tiger right here on the site.</p>
           </div>
           
         </div>
@@ -250,11 +227,11 @@
     <!-- ================= FINAL CTA ================= -->
     <section class="cta-final shell" id="contact">
       <p class="kicker" style="justify-content:center;">Let's Talk</p>
-      <h2 class="cta-final__title">The right move starts with a conversation.</h2>
-      <p class="cta-final__sub">No pressure, no scripts — just an honest read on your situation and the market.</p>
+      <h2 class="cta-final__title">Ready to walk in proud?</h2>
+      <p class="cta-final__sub">Free estimates, no pressure — call, text, or email and we'll take it from there.</p>
       <div class="cta-final__actions">
-        <a href="tel:+16045550119" class="btn btn--primary">Call (604) 555-0119</a>
-        <a href="mailto:elena@marshandco.ca" class="btn btn--ghost">Email Elena</a>
+        <a href="tel:+16047830173" class="btn btn--primary">Call (604) 783-0173</a>
+        <a href="mailto:tigerfloors.sales@gmail.com" class="btn btn--ghost">Email TIGER</a>
       </div>
     </section>
   </main>
@@ -262,28 +239,28 @@
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="shell footer__row">
-      <span class="footer__brand">Elena Marsh · Marsh &amp; Co. Real Estate</span>
-      <span>&copy; 2026 Marsh &amp; Co. Real Estate · Serving Abbotsford · Chilliwack · Langley · Mission</span>
-      <span>(604) 555-0119 · elena@marshandco.ca</span>
+      <span class="footer__brand">TIGER Floors</span>
+      <span>&copy; 2026 TIGER Floors · Serving Coquitlam &amp; the Lower Mainland</span>
+      <span>(604) 783-0173 · tigerfloors.sales@gmail.com</span>
     </div>
   </footer>
 
   <!-- ================= CHAT CONCIERGE ================= -->
   <button class="chat-trigger" id="chat-trigger" type="button" aria-haspopup="dialog" aria-controls="chat-overlay" aria-expanded="false">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-    Ask Elena
+    Ask Tiger
   </button>
-  <div class="chat-overlay" id="chat-overlay" role="dialog" aria-modal="true" aria-label="Ask Elena" aria-hidden="true">
+  <div class="chat-overlay" id="chat-overlay" role="dialog" aria-modal="true" aria-label="Ask Tiger" aria-hidden="true">
     <div class="chat-bar">
-      <span class="chat-bar__title">Elena Marsh · Marsh &amp; Co.</span>
+      <span class="chat-bar__title">TIGER Floors</span>
       <button class="chat-close" id="chat-close" aria-label="Close">&times;</button>
     </div>
     <div class="chat-thread" id="chat-thread"></div>
     <div class="chat-suggestions" id="chat-suggestions">
-      <button class="chat-chip" type="button">What's my home worth?</button>
-      <button class="chat-chip" type="button">What areas do you cover?</button>
-      <button class="chat-chip" type="button">What does a buyer's agent cost?</button>
-      <button class="chat-chip" type="button">How fast do homes sell right now?</button>
+      <button class="chat-chip" type="button">Do you offer free estimates?</button>
+      <button class="chat-chip" type="button">What areas do you serve?</button>
+      <button class="chat-chip" type="button">What flooring types do you install?</button>
+      <button class="chat-chip" type="button">How long does installation take?</button>
     </div>
     <form class="chat-input" id="chat-form">
       <textarea id="chat-field" rows="1" placeholder="Ask a question..." required></textarea>
