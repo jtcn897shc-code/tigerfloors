@@ -35,15 +35,29 @@ contrast-check that decided how they're used.
   **confirm the exact service-city list** (Port Coquitlam? Port Moody?
   Burnaby? New Westminster? Maple Ridge?) before launch.
 
+## Real photos (added 2026-09-16)
+
+Four client-supplied phone-screenshot photos were cropped (letterboxing
+and an OS-injected Photos-viewer chevron button removed programmatically,
+not by eyeballing pixel coordinates) and re-encoded to strip EXIF before
+use. Materials were confirmed by the client per-photo except one:
+
+| File | Used | Material |
+|---|---|---|
+| `images/hero-laminate-living-room.jpg` | Hero | Laminate (confirmed) |
+| `images/work-hardwood-construction.jpg` | Recent Work | Hardwood (confirmed) |
+| `images/work-vinyl-stairs-after.jpg` | Recent Work | Vinyl (confirmed) |
+| `images/work-bay-window.jpg` | Recent Work | **Unconfirmed** — client wasn't sure. Captioned generically ("Recent Installation") rather than guessing the material. |
+
 ## Open — TODO before launch (blocking)
 
 - [ ] Owner/contact name (currently the site never names an individual —
   it speaks as "TIGER Floors" / "our crew," which is honest given we don't
   have a name, but a name humanizes the About section if one exists)
-- [ ] Real job photos for the hero, services cards, and the Before/After
-  gallery section — placeholders are live now (see `images/` — only the
-  logo is real; everything else is a styled gradient placeholder via the
-  same pattern used for the hero portrait)
+- [ ] Confirm the material in `images/work-bay-window.jpg` so its caption
+  can name it specifically
+- [ ] More real photos over time — services cards still use icons, not
+  photos, and a rotating/larger gallery would strengthen the site further
 - [ ] Confirm full service-area city list (see above)
 - [ ] Business hours (FB shows "Always open," which reads like an
   unconfigured FB default rather than a deliberate claim — omitted from

@@ -52,8 +52,8 @@
           </div>
           <p class="hero__areas" data-reveal style="--i:4">Serving {{AREAS_SERVED}}</p>
         </div>
-        <div class="hero__portrait" data-reveal style="--i:2" aria-hidden="true">
-          <img src="images/tiger-mark.png" alt="" class="hero__mark" />
+        <div class="hero__photo-frame" data-reveal style="--i:2">
+          <img src="{{HERO_IMAGE}}" alt="{{HERO_ALT}}" class="hero__photo" />
         </div>
       </div>
     </section>
@@ -117,7 +117,7 @@
         <div class="gallery__grid">
           <!-- REPEAT:gallery -->
           <div class="gallery__slot" data-reveal>
-            <div class="gallery__media"><span class="gallery__icon">{{GALLERY_ICON}}</span></div>
+            <div class="gallery__media"><img src="{{GALLERY_IMAGE}}" alt="{{GALLERY_ALT}}" class="gallery__photo" /></div>
             <p class="gallery__label">{{GALLERY_LABEL}}</p>
           </div>
           <!-- END:gallery -->

@@ -249,6 +249,28 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   .hero__portrait { max-width: 320px; margin-inline: auto; }
 }
 
+/* Real jobsite photo frame for the hero (distinct from .hero__portrait,
+   which stays a padded badge frame for the mascot mark in About) — same
+   offset accent border, but the photo fills the frame edge-to-edge. */
+.hero__photo-frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--tan);
+}
+.hero__photo-frame::before {
+  content: "";
+  position: absolute;
+  inset: var(--sp-24) calc(var(--sp-24) * -1) calc(var(--sp-24) * -1) var(--sp-24);
+  border: 1px solid var(--orange);
+  pointer-events: none;
+  z-index: -1;
+}
+.hero__photo { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 900px) {
+  .hero__photo-frame { max-width: 320px; margin-inline: auto; }
+}
+
 /* ---------- Materials strip (replaces a numeric trust band — no
    confirmed stats exist yet, see DISCOVERY.md; this shows the
    confirmed service list instead of an invented number) ---------- */
@@ -315,14 +337,9 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .gallery__blurb { color: var(--navy); margin: var(--sp-12) 0 0; max-width: 56ch; }
 .gallery__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--sp-24); }
 .gallery__slot { background: var(--tan); border-radius: var(--radius-card); overflow: hidden; }
-.gallery__media {
-  aspect-ratio: 4 / 3;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(160deg, #f7e3cc 0%, var(--tan) 55%, #f7e3cc 100%);
-}
-.gallery__icon { width: 44px; height: 44px; color: var(--orange); opacity: 0.9; }
-.gallery__icon svg { width: 100%; height: 100%; }
+.gallery__media { aspect-ratio: 4 / 3; overflow: hidden; background: var(--tan); }
+.gallery__photo { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s var(--ease); }
+.gallery__slot:hover .gallery__photo { transform: scale(1.04); }
 .gallery__label {
   padding: var(--sp-16) var(--sp-16);
   margin: 0;

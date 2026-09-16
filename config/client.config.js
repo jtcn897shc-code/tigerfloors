@@ -24,6 +24,14 @@ export default {
     bio: "TIGER Floors installs hardwood, laminate, vinyl, and tile floors across Coquitlam and the Lower Mainland. Every quote starts with a free, no-pressure estimate — no work gets booked until you've seen a real number.",
   },
 
+  // Real jobsite photo (confirmed: laminate), client-supplied. Cropped
+  // from a phone screenshot and re-encoded to strip EXIF before use —
+  // see DISCOVERY.md / DESIGN.md §6 in the build playbook.
+  hero: {
+    image: "images/hero-laminate-living-room.jpg",
+    alt: "Finished laminate flooring in a furnished living room with a fireplace and wall art",
+  },
+
   brand: {
     cream: "#f7f1e6",
     tan: "#ecdfc7",
@@ -41,17 +49,30 @@ export default {
     { name: "Tile", blurb: "Precision tile installation for kitchens, bathrooms, and entryways.", icon: "grid" },
   ],
 
-  // No real jobsite photos yet (TODO — see DISCOVERY.md). Placeholder
-  // cards render an on-brand styled placeholder instead of a broken or
-  // fake stock image, same pattern as the hero portrait treatment.
+  // Real jobsite photos, client-supplied (cropped from phone screenshots,
+  // re-encoded to strip EXIF). Materials confirmed by the client except
+  // the bay-window shot, which is captioned generically rather than
+  // guessing the material — see DISCOVERY.md.
   gallery: {
     kicker: "Recent Work",
     title: "A fresh floor makes all the difference.", // (confirmed) — client's own FB post caption, Sep 4
-    blurb: "Before-and-after photos from real jobs are coming soon.",
+    blurb: "Real jobs, Coquitlam and the Lower Mainland.",
     slots: [
-      { label: "Hardwood — Coquitlam", kind: "hardwood" },
-      { label: "Tile — Coquitlam", kind: "tile" },
-      { label: "Vinyl — Coquitlam", kind: "vinyl" },
+      {
+        image: "images/work-hardwood-construction.jpg",
+        label: "Hardwood — Coquitlam",
+        alt: "New hardwood flooring installed in an open-concept living space, mid-project",
+      },
+      {
+        image: "images/work-vinyl-stairs-after.jpg",
+        label: "Vinyl Stair Treads — Coquitlam",
+        alt: "Staircase with new dark vinyl-plank treads, white risers and balusters, finished",
+      },
+      {
+        image: "images/work-bay-window.jpg",
+        label: "Recent Installation — Coquitlam",
+        alt: "New plank flooring installed in a bright room with a bay window",
+      },
     ],
   },
 

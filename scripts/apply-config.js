@@ -66,7 +66,8 @@ function buildIndexHtml() {
     html,
     "gallery",
     config.gallery.slots.map((g) => ({
-      GALLERY_ICON: ICONS[g.kind] || "",
+      GALLERY_IMAGE: escapeHtml(g.image),
+      GALLERY_ALT: escapeHtml(g.alt),
       GALLERY_LABEL: escapeHtml(g.label),
     }))
   );
@@ -85,6 +86,8 @@ function buildIndexHtml() {
     CITY: escapeHtml(config.company.city),
     AREAS_SERVED: escapeHtml(config.company.areasServed),
     BIO: escapeHtml(config.company.bio),
+    HERO_IMAGE: escapeHtml(config.hero.image),
+    HERO_ALT: escapeHtml(config.hero.alt),
     ESTIMATE_BLURB: escapeHtml(config.estimate.blurb),
     GALLERY_KICKER: escapeHtml(config.gallery.kicker),
     GALLERY_TITLE: escapeHtml(config.gallery.title),
