@@ -2,7 +2,7 @@
   "name": "destura-template-real-estate",
   "private": true,
   "type": "module",
-  "description": "Destura template library \u2014 Home Services (HVAC/Plumbing/Electrical). No dependencies: this is a config flag only, so scripts/apply-config.js and api/chat.js can use import/export syntax. Zero build step for the deployed site itself.",
+  "description": "Destura template library \u2014 Home Services (flooring installer). No dependencies: this is a config flag only, so scripts/apply-config.js and api/chat.js can use import/export syntax. Zero build step for the deployed site itself.",
   "scripts": {
     "apply-config": "node scripts/apply-config.js"
   }

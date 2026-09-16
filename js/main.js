@@ -20,14 +20,14 @@
   const links = document.querySelector(".nav__links");
   if (toggle && links) {
     toggle.addEventListener("click", function () {
-      const open = links.style.display === "flex";
-      links.style.display = open ? "" : "flex";
-      links.style.position = "fixed";
-      links.style.inset = "64px 0 auto 0";
-      links.style.background = "var(--paper)";
-      links.style.flexDirection = "column";
-      links.style.padding = "16px 24px";
-      links.style.borderBottom = "1px solid var(--hairline)";
+      const open = links.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+    links.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        links.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
     });
   }
 
@@ -74,13 +74,13 @@
     }
   }
 
-  /* ---------- Valuation CTA: opens the concierge with the question pre-sent ---------- */
-  const valBtn = document.getElementById("valuation-open");
-  if (valBtn) {
-    valBtn.addEventListener("click", function () {
+  /* ---------- Estimate CTA: opens the concierge with the question pre-sent ---------- */
+  const estimateBtn = document.getElementById("estimate-open");
+  if (estimateBtn) {
+    estimateBtn.addEventListener("click", function () {
       document.dispatchEvent(
         new CustomEvent("destura:chat-open", {
-          detail: { prompt: "What's my home worth? I'd like a free valuation." },
+          detail: { prompt: "I'd like a free estimate for my floors." },
         })
       );
     });
